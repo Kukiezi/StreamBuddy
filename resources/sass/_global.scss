@@ -1,0 +1,23 @@
+body {
+  background: #23272A;
+  min-height: 100vh;
+}
+
+.button__back {
+  font-family: $font-family-futura;
+  font-size: 1rem;
+  font-weight: normal;
+
+  &--box {
+    padding-bottom: 21px;
+
+  }
+}
+
+.color-twitch {
+  color: $twitch-color !important;
+}
+
+.color-mixer {
+  color: $mixer-color !important;
+}

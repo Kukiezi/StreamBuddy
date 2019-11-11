@@ -1,0 +1,150 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use App\Game;
+
+class GamesSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $game = new Game();
+        $game->name = 'Fortnite';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'Call of Duty: Modern Warfare';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/./Call%20of%20Duty:%20Modern%20Warfare-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'Overwatch';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Overwatch-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'League of Legends';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'Just Chatting';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Just%20Chatting-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'Grand Theft Auto V';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'World of Warcraft';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'Hearthstone';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Hearthstone-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'Rocket League';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Rocket%20League-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'FIFA 20';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/FIFA%2020-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'Dota 2';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Dota%202-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = 'Counter-Strike: Global Offensive';
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/./Counter-Strike:%20Global%20Offensive-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Luigi's Mansion 3";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Luigi%27s%20Mansion%203-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Escape From Tarkov";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Escape%20From%20Tarkov-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Yooka-Laylee and the Impossible Lair";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Yooka-Laylee%20and%20the%20Impossible%20Lair-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "PLAYERUNKNOWN'S BATTLEGROUNDS";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Overwatch 2";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Overwatch%202-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Dead by Daylight";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Dead%20by%20Daylight-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Destiny 2";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Destiny%202-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Sea of Thieves";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Sea%20of%20Thieves-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Apex Legends";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Apex%20Legends-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Street Fighter V";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Street%20Fighter%20V-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Minecraft";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Minecraft-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Super Smash Bros. Ultimate";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Super%20Smash%20Bros.%20Ultimate-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Tom Clancy's Rainbow Six: Siege";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/./Tom%20Clancy%27s%20Rainbow%20Six:%20Siege-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game = new Game();
+        $game->name = "Teamfight Tactics";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/Teamfight%20Tactics-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+        $game->name = "The Deed: Dynasty";
+        $game->image = 'https://static-cdn.jtvnw.net/ttv-boxart/./The%20Deed:%20Dynasty-285x380.jpg';
+        $game->popular = false;
+        $game->save();
+    }
+}

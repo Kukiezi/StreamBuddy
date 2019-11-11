@@ -1,0 +1,72 @@
+.popular-games {
+  padding-top: 5rem;
+
+  &__column {
+    @media (max-width: 769px) {
+      &:nth-child(2n + 1) {
+        padding-left: 1.2em !important;
+      }
+      &:nth-child(2n) {
+        padding-right: 1.2em !important;
+      }
+    }
+  }
+
+  &__header {
+    font-family: $font-family-futura !important;
+    font-size: 2em;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 0.5em;
+  }
+
+  .popular {
+    &__img {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      @media (max-width: 769px) {
+        max-height: 175px !important;
+      }
+    }
+
+    &__channel {
+      font-size: 0.9em;
+      font-weight: 400;
+      width: 100%;
+      overflow: hidden;
+      color: #FFFFFF;
+      font-family: $font-familt-roboto !important;
+    }
+
+    &__viewers {
+      display: inline-block;
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #e91916;
+    }
+
+    &__title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.5rem !important;
+      color: #FFFFFF;
+      font-family: $font-family-futura !important;
+    }
+
+    &__game {
+      font-size: 0.9em;
+      font-weight: 400;
+      width: 100%;
+      overflow: hidden;
+      color: rgba(255, 255, 255, 0.72);
+      font-family: $font-family-monsterrat !important;
+    }
+  }
+}
+
+.game__image {
+  width: 60px;
+  height: 60px;
+}
+

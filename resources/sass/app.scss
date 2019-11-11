@@ -1,0 +1,15 @@
+@import '~bulma/bulma';
+@import '~bulma-extensions/dist/css/bulma-extensions.min.css';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '_variables.scss';
+
+@import 'games';
+@import 'navbar';
+@import 'stream';
+@import 'global';
+@import 'auth';
+@import 'news';
+@import 'footer';

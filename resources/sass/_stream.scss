@@ -1,0 +1,147 @@
+.switch[type=checkbox].is-warning:checked + label::before, .switch[type=checkbox].is-warning:checked + label:before {
+  background: #6441A4;
+}
+
+.streams {
+  padding-top: 3rem;
+
+  &__mixer {
+    max-height: 24px !important;
+  }
+
+  &__filter-image {
+    position: absolute !important;
+    top: 0;
+    //left: 0 !important;
+    //top: 25% !important;
+    transform: translateY(50%);
+    padding-top: 0 !important;
+  }
+
+  &__filter-column {
+    @media (max-width: 769px) {
+      padding-bottom: 3em !important;
+    }
+  }
+
+  &__filter-text {
+    font-family: $font-family-futura !important;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white;
+    display: inline-block;
+    padding-top: 0.75rem;
+    color: rgba(255, 255, 255, 0.72);
+    @media (min-width: 1024px) {
+      float: right;
+    }
+  }
+
+  &__mixer-box {
+    padding-top: 0.25em;
+  }
+
+  &__game {
+    padding-top: 5rem !important;
+    position: relative;
+  }
+
+  &__header {
+    font-family: $font-family-futura !important;
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  &__game-header {
+    font-family: $font-family-futura !important;
+    font-size: 2em;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 0.5em;
+    display: inline-block;
+    position: absolute;
+    top: 0.2em;
+    left: 2.5em;
+  }
+
+  &__game-viewers {
+    font-family: $font-familt-roboto !important;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #e91916;
+    position: absolute;
+    top: 3.1em;
+    left: 5.1em;
+  }
+
+  .stream {
+    &__img {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      max-height: 212.55px !important;
+      max-width: 377.88px;
+
+
+    }
+
+    &__channel {
+      font-size: 0.9em;
+      font-weight: 400;
+      width: 100%;
+      overflow: hidden;
+      color: #FFFFFF;
+      font-family: $font-familt-roboto !important;
+    }
+
+    &__viewers {
+      display: inline-block;
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #e91916;
+    }
+
+    &__title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.5rem !important;
+      color: #FFFFFF;
+      font-family: $font-family-futura !important;
+    }
+
+    &__game {
+      font-size: 0.9em;
+      font-weight: 400;
+      width: 100%;
+      overflow: hidden;
+      color: rgba(255, 255, 255, 0.72);
+      font-family: $font-family-monsterrat !important;
+    }
+  }
+}
+
+.card {
+  border-radius: 6px;
+  background: #2C2F33 !important;
+
+  &:hover {
+    transition: all .1s ease-in-out;
+    transform: scale(1.05);
+  }
+
+}
+
+.card-content {
+  padding: 0.5rem !important;
+  background: #2C2F33 !important;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+
+  .media {
+    margin-bottom: 0.5rem !important;
+  }
+}

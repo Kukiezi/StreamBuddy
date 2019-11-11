@@ -1,0 +1,14 @@
+.footer {
+  background: #23272A !important;
+  border-top: 2px solid #2C2F33;
+
+  &__p {
+    font-family: $font-family-monsterrat;
+    color: white;
+    font-size: 16px;
+  }
+
+  &__company {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,136 @@
+.pagination {
+  align-self: center !important;
+  border: 3px solid #2C2F33 !important;
+  box-shadow: 0 0 8px #0c1f31;
+  border-bottom: 0 none !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  display: flex !important;
+  font-size: 16px !important;
+  margin-top: auto !important;
+  overflow: hidden !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  padding: 0.4em;
+}
+
+.active {
+  color: white !important;
+}
+
+.page-item {
+color: #9cb3c9;
+
+  .page-link {
+
+    margin-bottom: 20px;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    padding: 8px 12px;
+
+    &:hover {
+      border-bottom: 3px solid #1f364d !important;
+      color: white;
+    }
+
+  }
+}
+
+
+.news-details {
+  //text-align: center;
+  &__header {
+    font-family: $font-family-futura !important;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 0.5em;
+    display: inline-block;
+    text-align: left !important;
+  }
+
+  &__author {
+    font-size: 16px;
+    font-family: $font-family-monsterrat;
+    color: #9cb3c9;
+  }
+
+  &__img {
+    position: relative;
+    width: 674px;
+    height: 325px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__body {
+    p {
+      text-align: left;
+      color: #b9c9da;
+      font-size: 18px;
+    }
+  }
+}
+
+.news {
+  &__img--background {
+
+    width: 180px;
+    height: 200px;
+  }
+
+  &__sidebar {
+    padding-top: 6em;
+  }
+
+  &__box {
+    box-shadow: 0 0 8px #0c1f31;
+    background-color: #2C2F33;
+    margin-bottom: 2em;
+    cursor: pointer;
+
+    &:hover {
+      transition: all .1s ease-in-out;
+      transform: scale(1.05);
+      background: #3b3f44;
+    }
+  }
+
+  &__header {
+    font-family: $font-family-futura !important;
+    font-size: 2em;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 1.5em;
+    display: inline-block;
+  }
+
+  &__img {
+    max-height: 170px;
+    vertical-align: middle;
+  }
+
+  &__helper {
+     display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  &__author {
+    padding: 1.5rem;
+    font-size: 16px;
+    font-family: $font-family-monsterrat;
+    color: #9cb3c9;
+  }
+
+  &__title {
+    font-family: $font-family-futura;
+    font-size: 26px;
+    color: white;
+    font-weight: 500;
+    padding: 1.5rem;
+  }
+}
