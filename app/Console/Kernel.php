@@ -27,8 +27,8 @@ class Kernel extends ConsoleKernel
     {
         $schedule->call(function () {
            $streamerService = new StreamerService('2ec58lis2tte9fscri8mujdvzayeyb');
-           $streamerService->fetchStreamsAndInsert(100, 100);
-           $streamerService->updatePopularGames();
+//           $streamerService->fetchStreamsAndInsert(100, 100);
+//           $streamerService->updatePopularGames();
         })->everyFiveMinutes();
     }
 

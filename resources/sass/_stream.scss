@@ -7,6 +7,14 @@
 
   &__mixer {
     max-height: 24px !important;
+
+    &--absolute {
+      position: absolute !important;
+      right: 0.3em;
+      top: 0.3em;
+      max-height: 24px !important;
+      z-index: 3;
+    }
   }
 
   &__filter-image {
