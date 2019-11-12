@@ -9,7 +9,7 @@
                 <div class="column is-10 is-relative">
                     <img class="game__image" src="{{$game['image']}}" alt="image of chosen game"/>
                     <h1 class="streams__game-header">{{$game['name']}}</h1>
-{{--                    <p class="streams__game-viewers">{{$game['viewers']}}</p>--}}
+                    {{--                    <p class="streams__game-viewers">{{$game['viewers']}}</p>--}}
                     <span class="streams__game-viewers">
                     <span style="color: white"><i class="far fa-eye"></i></span>
                     <p class="stream__viewers">{{ isset($game['viewers']) ?  $game['viewers'] : $viewers}}</p></span>
@@ -28,7 +28,24 @@
                                              alt="live stream preview image">
                                     </figure>
                                 </div>
-                                <div class="card-content">
+                                <div class="card-content is-relative">
+                                    @if ($stream['platform'] == 'twitch')
+                                        <figure class="image is-24x24 streams__mixer--absolute">
+                                            <img class="streams__mixer--absolute"
+                                                 src="{{asset('images/twitch.png')}}" alt="twitch logo icon"/>
+                                        </figure>
+                                    @elseif ($stream['platform'] == 'mixer')
+                                        <figure class="image is-24x24 streams__mixer--absolute">
+                                            <img class="streams__mixer--absolute"
+                                                 src="{{asset('images/mixerdark.png')}}" alt="twitch logo icon"/>
+                                        </figure>
+
+                                    @elseif ($stream['platform'] == 'youtube')
+                                        <figure class="image is-24x24 streams__mixer--absolute">
+                                            <img class="streams__mixer--absolute"
+                                                 src="{{asset('images/youtube3.png')}}" alt="twitch logo icon"/>
+                                        </figure>
+                                    @endif
                                     <div class="media">
                                         <div class="media-left">
                                             <figure class="image is-48x48">
