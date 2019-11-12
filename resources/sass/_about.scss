@@ -1,0 +1,31 @@
+.about {
+  &__title {
+    font-family: $font-family-futura !important;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: white;
+  }
+
+  &__header {
+    font-family: $font-family-futura;
+    font-size: 26px;
+    color: white;
+    font-weight: 600;
+  }
+
+  &__box {
+    box-shadow: 0 0 8px #0c1f31;
+    background-color: #2C2F33;
+    margin-bottom: 2em;
+    cursor: pointer;
+    text-align: left;
+    color: #b9c9da;
+    font-size: 18px;
+
+    &:hover {
+      transition: all .1s ease-in-out;
+      transform: scale(1.05);
+      background: #3b3f44;
+    }
+  }
+}

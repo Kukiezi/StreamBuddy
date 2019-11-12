@@ -14,7 +14,7 @@
                                     <figure class="image is-352x198">
                                         <img class="stream__img"
                                              src="{{ $streams[$i]['preview'] }}"
-                                             alt="Placeholder image">
+                                             alt="live stream preview image">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -23,7 +23,7 @@
                                             <figure class="image is-48x48">
                                                 <img class="is-rounded"
                                                      src="{{ $streams[$i]['logo']}}"
-                                                     alt="Placeholder image">
+                                                     alt="live streamer avatar">
                                             </figure>
                                         </div>
                                         <div class="media-content">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="column is-11-tablet is-5-desktop is-10-mobile  news">
-            <p class="news__header">Browse News from Streaming world!</p>
+            <h1 class="news__header">Browse News from Streaming world!</h1>
             <div class="columns is-centered is-mobile is-multiline">
                 @foreach ($posts as $post)
                     <div class="column is-12-tablet is-12-desktop is-12-mobile news__box">
@@ -56,7 +56,7 @@
 
                             <div class="columns is-multiline">
                                 <div class="column is-8 is-relative">
-                                    <h1 class="news__title">{{$post->title}}</h1>
+                                    <p class="news__title">{{$post->title}}</p>
                                     <p class="news__author">{{$post->author['name']}} | {{$post->created_at}}</p>
                                 </div>
                                 <div class="column is-4 is-relative">
@@ -82,7 +82,7 @@
                                     <figure class="image is-352x198">
                                         <img class="stream__img"
                                              src="{{ $streams[$i]['preview'] }}"
-                                             alt="Placeholder image">
+                                             alt="live stream preview image">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -91,7 +91,7 @@
                                             <figure class="image is-48x48">
                                                 <img class="is-rounded"
                                                      src="{{ $streams[$i]['logo']}}"
-                                                     alt="Placeholder image">
+                                                     alt="live streamer avatar">
                                             </figure>
                                         </div>
                                         <div class="media-content">

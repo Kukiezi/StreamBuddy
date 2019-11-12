@@ -7,8 +7,8 @@
         <div class="column is-10 streams streams__game">
             <div class="columns">
                 <div class="column is-10 is-relative">
-                    <img class="game__image" src="{{$game['image']}}"/>
-                    <p class="streams__game-header">{{$game['name']}}</p>
+                    <img class="game__image" src="{{$game['image']}}" alt="image of chosen game"/>
+                    <h1 class="streams__game-header">{{$game['name']}}</h1>
 {{--                    <p class="streams__game-viewers">{{$game['viewers']}}</p>--}}
                     <span class="streams__game-viewers">
                     <span style="color: white"><i class="far fa-eye"></i></span>
@@ -25,7 +25,7 @@
                                     <figure class="image is-352x198">
                                         <img class="stream__img"
                                              src="{{ $stream['preview'] }}"
-                                             alt="Placeholder image">
+                                             alt="live stream preview image">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -34,7 +34,7 @@
                                             <figure class="image is-48x48">
                                                 <img class="is-rounded"
                                                      src="{{ $stream['logo']}}"
-                                                     alt="Placeholder image">
+                                                     alt="live streamer avatar">
                                             </figure>
                                         </div>
                                         <div class="media-content">

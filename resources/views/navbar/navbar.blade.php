@@ -31,6 +31,9 @@
         </div>
 
         <div class="navbar-end">
+            <a href="/about" class="navbar-item has-text-white">
+                About Project
+            </a>
             <a class="navbar-item" style="padding-right: 2em;" target="_blank" href="https://discord.gg/sqxFVER">
                 Join our discord server
                 <span style="padding-left: 0.5em; color: #7289DA; font-weight: normal;"><i class="fab fa-discord fa-2x"></i></span>

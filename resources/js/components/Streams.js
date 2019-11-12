@@ -114,7 +114,7 @@ export default class Streams extends Component {
                 <div className="column is-12 streams">
                     <div className="columns is-mobile is-multiline is-centered">
                         <div className="column is-6-desktop is-11-mobile is-12-tablet">
-                            <p className="streams__header">Browse Streams</p>
+                            <h1 className="streams__header">Browse Streams</h1>
                         </div>
 
                         <div className="column is-4-touch is-hidden-mobile">
@@ -131,7 +131,7 @@ export default class Streams extends Component {
                                                    onChange={(event) => this.handleChecked(event)}/>
                                             <label className="streams__filter-image" htmlFor="switchTwitch">
                                                 <figure style={{display: 'inline-block'}} className="image is-24x24">
-                                                    <img className="streams__mixer" src={twitch} alt="twitch"/>
+                                                    <img className="streams__mixer" src={twitch} alt="twitch logo icon"/>
                                                 </figure>
                                             </label>
                                         </div>
@@ -146,7 +146,7 @@ export default class Streams extends Component {
                                             <label className="streams__filter-image" htmlFor="switchMixer">
                                                 <figure style={{display: 'inline-block', maxHeight: '24px'}}
                                                         className="image is-24x24">
-                                                    <img className="streams__mixer" src={mixer} alt="mixer"/>
+                                                    <img className="streams__mixer" src={mixer} alt="mixer.com logo icon"/>
                                                 </figure>
                                             </label>
                                         </div>
@@ -160,7 +160,7 @@ export default class Streams extends Component {
                                                    onChange={(event) => this.handleChecked(event)}/>
                                             <label className="streams__filter-image" htmlFor="switchYoutube">
                                                 <figure style={{display: 'inline-block'}} className="image is-24x24">
-                                                    <img className="streams__mixer" src={youtube} alt="youtube"/>
+                                                    <img className="streams__mixer" src={youtube} alt="youtube logo icon"/>
                                                 </figure>
                                             </label>
                                         </div>

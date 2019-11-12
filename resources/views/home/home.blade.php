@@ -5,7 +5,7 @@
 
     <div class="columns is-multiline is-centered">
         <div class="column is-10 popular-games">
-            <p class="popular-games__header">Popular Games</p>
+            <h1 class="popular-games__header">Popular Games</h1>
             <div class="columns is-multiline is-centered popular is-mobile">
                 @foreach ($populars as $popular)
                     <div class="column is-2-tablet is-6-mobile popular-games__column">

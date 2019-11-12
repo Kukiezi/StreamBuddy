@@ -23,7 +23,7 @@ export default class Stream extends Component {
                             <figure className="image is-352x198">
                                 <img className="stream__img"
                                      src={this.props.stream.preview}
-                                     alt="Placeholder image"/>
+                                     alt="live stream preview image"/>
                             </figure>
                         </div>
                         <div className="card-content">
@@ -32,7 +32,7 @@ export default class Stream extends Component {
                                     <figure className="image is-48x48">
                                         <img className="is-rounded"
                                              src={this.props.stream.logo}
-                                             alt="Placeholder image"/>
+                                             alt="live streamer avatar"/>
                                     </figure>
                                 </div>
                                 <div className="media-content">

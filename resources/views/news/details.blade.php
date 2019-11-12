@@ -14,7 +14,7 @@
                                     <figure class="image is-352x198">
                                         <img class="stream__img"
                                              src="{{ $streams[$i]['preview'] }}"
-                                             alt="Placeholder image">
+                                             alt="live stream preview image">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -23,7 +23,7 @@
                                             <figure class="image is-48x48">
                                                 <img class="is-rounded"
                                                      src="{{ $streams[$i]['logo']}}"
-                                                     alt="Placeholder image">
+                                                     alt="live streamer avatar">
                                             </figure>
                                         </div>
                                         <div class="media-content">
@@ -52,7 +52,7 @@
                     <span class="color-mixer">buddy</span></a>
             </div>
             <img class="news-details__img" src="{{ Voyager::image( $post->image ) }}" alt="news image">
-            <p class="news-details__header has-text-centered">{{$post['title']}}</p>
+            <h1 class="news-details__header has-text-centered">{{$post['title']}}</h1>
             <div class="columns is-centered is-multiline">
                 <div class="column is-12 news-details__body">
                     {!! $post['body'] !!}
@@ -73,7 +73,7 @@
                                     <figure class="image is-352x198">
                                         <img class="stream__img"
                                              src="{{ $streams[$i]['preview'] }}"
-                                             alt="Placeholder image">
+                                             alt="live stream preview image">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -82,7 +82,7 @@
                                             <figure class="image is-48x48">
                                                 <img class="is-rounded"
                                                      src="{{ $streams[$i]['logo']}}"
-                                                     alt="Placeholder image">
+                                                     alt="live streamer avatar">
                                             </figure>
                                         </div>
                                         <div class="media-content">
