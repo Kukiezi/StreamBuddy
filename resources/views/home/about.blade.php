@@ -49,6 +49,22 @@
         <div class="column is-11-tablet is-8-desktop is-11-mobile about__box">
             <div class="columns is-multiline">
                 <div class="column is-12 is-relative">
+                    <p class="about__header">How does it work?</p>
+                </div>
+                <div class="column is-12 is-relative">
+                    <p style="text-align: justify;">
+                        We are storing 250 streams from 3 platforms: Twitch, Mixer and Youtube. Using their official
+                        Apis we can store 100 Twitch streams, 100 Mixer streams and 50 Youtube streams.
+                        Streams are updated every 5 minutes. All the streams we are fetching are the most popular from
+                        each platform. In other worlds You can browse, filter by platform and find a stream to watch
+                        in one place!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="column is-11-tablet is-8-desktop is-11-mobile about__box">
+            <div class="columns is-multiline">
+                <div class="column is-12 is-relative">
                     <p class="about__header">Our Vision</p>
                 </div>
                 <div class="column is-12 is-relative">
@@ -57,7 +73,8 @@
                         live stream but are not where to go. We want this website to perform as the go to place
                         for people to check what is being streamed on which website right now. We want people to come
                         here to read news from streaming world. And we want to make more features to make
-                        StreamBuddy Your real buddy! If You want to with it join our <a target="_blank" href="https://discord.gg/sqxFVER">Discord</a>
+                        StreamBuddy Your real buddy! If You want to with it join our <a target="_blank"
+                                                                                        href="https://discord.gg/sqxFVER">Discord</a>
                         and let us know Your thoughts!
                     </p>
                 </div>
