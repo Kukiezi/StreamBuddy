@@ -21,7 +21,7 @@
 }
 
 .page-item {
-color: #9cb3c9;
+  color: #9cb3c9;
 
   .page-link {
 
@@ -72,6 +72,13 @@ color: #9cb3c9;
       color: #b9c9da;
       font-size: 18px;
     }
+
+    strong {
+      text-align: left;
+      color: #b9c9da;
+      font-size: 18px;
+      font-weight: bold;
+    }
   }
 }
 
@@ -114,7 +121,7 @@ color: #9cb3c9;
   }
 
   &__helper {
-     display: inline-block;
+    display: inline-block;
     height: 100%;
     vertical-align: middle;
   }

@@ -1,6 +1,6 @@
 @extends('layouts.app', ['title' => $post['title'],
 'description' => $post['meta_description']])
-
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 @section('content')
     <div class="columns is-mobile is-multiline is-centered streams">
         <div class="column is-2 is-hidden-touch">
@@ -48,7 +48,8 @@
         </div>
         <div class="column is-4-desktop is-10-tablet is-11-mobile news-details">
             <div class="button__back--box">
-                <a href="{{ url()->previous() }}" class="button__back"><span class="color-mixer"><i class="fas fa-long-arrow-alt-left"></i></span> <span class="color-twitch">Go back to news</span>
+                <a href="{{ url()->previous() }}" class="button__back"><span class="color-mixer"><i
+                                class="fas fa-long-arrow-alt-left"></i></span> <span class="color-twitch">Go back to news</span>
                     <span class="color-mixer">buddy</span></a>
             </div>
             <img class="news-details__img" src="{{ Voyager::image( $post->image ) }}" alt="news image">

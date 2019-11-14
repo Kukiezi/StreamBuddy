@@ -21,7 +21,7 @@ class StreamerService
         ];
         $this->twitchApi = new \TwitchApi\TwitchApi($options);
         $this->mixerApi = new Streams();
-        $this->youtubeApi = new YoutubeApi("AIzaSyCTNjPy3Gzsn05dfSSI3z6W6Y2V4TBfDgk");
+        $this->youtubeApi = new YoutubeApi("AIzaSyDdkF_-xuJpjnkPzVbSm6PG4SakUnHd1l8");
     }
 
     public function getTopGames()
