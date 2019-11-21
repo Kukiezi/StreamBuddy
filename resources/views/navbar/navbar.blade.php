@@ -40,7 +40,7 @@
                             class="fab fa-discord fa-2x"></i></span>
             </a>
             @if (Auth::guest())
-                <a class="navbar-item" href="{{ url('/login') }}">Login</a>
+                <a class="navbar-item" style="padding-right: 2rem;" href="{{ url('/login') }}">Login</a>
             @else
                 <div id="dropdown" class="dropdown">
                     <div id="trigger" class="dropdown-trigger">
