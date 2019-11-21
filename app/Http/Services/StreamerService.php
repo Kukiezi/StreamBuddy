@@ -41,11 +41,13 @@ class StreamerService
         $data = array();
         $followed = json_decode($user->streams, true);
         $streamsAll = Stream::all();
-        foreach ($followed as $followedStreamer) {
-            foreach ($streamsAll as $stream) {
-                if ($stream->user == $followedStreamer) {
-                    array_push($data, $stream);
-                    break;
+        if ($followed != null) {
+            foreach ($followed as $followedStreamer) {
+                foreach ($streamsAll as $stream) {
+                    if ($stream->user == $followedStreamer) {
+                        array_push($data, $stream);
+                        break;
+                    }
                 }
             }
         }
