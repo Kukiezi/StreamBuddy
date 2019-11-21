@@ -36,23 +36,42 @@
             </a>
             <a class="navbar-item" style="padding-right: 2em;" target="_blank" href="https://discord.gg/sqxFVER">
                 Join our discord server
-                <span style="padding-left: 0.5em; color: #7289DA; font-weight: normal;"><i class="fab fa-discord fa-2x"></i></span>
+                <span style="padding-left: 0.5em; color: #7289DA; font-weight: normal;"><i
+                            class="fab fa-discord fa-2x"></i></span>
             </a>
-                        @if (Auth::guest())
-                            <a class="navbar-item" href="{{ url('/login') }}">Login</a>
-                        @else
-                            {{ Auth::user()->name }} <span class="caret"></span>
-
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
+            @if (Auth::guest())
+                <a class="navbar-item" href="{{ url('/login') }}">Login</a>
+            @else
+                <div id="dropdown" class="dropdown">
+                    <div id="trigger" class="dropdown-trigger">
+                        {{--                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">--}}
+                        <a class="navbar-item has-text-white">
+                            <span>Hello, {{ explode(' ',trim(Auth::user()->name))[0] }}</span>
+                            <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span></a>
+                        {{--                            </button>--}}
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <a href="{{ route('logout') }}" class="dropdown-item"
+                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        @endif
+                        </div>
+                    </div>
+                </div>
+                {{--                <a class="navbar-item" href="{{ route('logout') }}"--}}
+                {{--                   onclick="event.preventDefault();--}}
+                {{--                                                                 document.getElementById('logout-form').submit();">--}}
+                {{--                    <p>{{ __('Logout') }}</p>--}}
+                {{--                </a>--}}
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            @endif
         </div>
     </div>
 </nav>
@@ -64,6 +83,13 @@
         burger.addEventListener('click', function () {
             burger.classList.toggle('is-active');
             nav.classList.toggle('is-active');
+        });
+        var trigger = document.getElementById('trigger');
+        var dropdown = document.querySelector('.dropdown');
+        console.log(trigger);
+        console.log(dropdown)
+        trigger.addEventListener('click', function () {
+            dropdown.classList.toggle('is-active');
         });
     })();
 </script>

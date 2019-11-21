@@ -1,9 +1,35 @@
+.dropdown {
+  font-family: $font-family-sans-serif !important;
+  font-size: 16px !important;
+  line-height: 21px !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  padding-right: 2rem;
+  margin-top: 5px;
+
+  &-menu {
+    min-width: 12rem !important;
+    left: -3rem !important;
+  }
+
+  &-content {
+    background-color: rgb(35, 39, 42) !important;
+  }
+
+  &-item {
+    color: white !important;
+    &:hover {
+      background-color: #3a4145 !important;
+    }
+  }
+}
+
 .navbar {
   background: #2C2F33 !important;
   max-height: 60px !important;
 
   &-menu {
-      background: #2C2F33 !important;
+    background: #2C2F33 !important;
   }
 
   &__login {
