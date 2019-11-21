@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 
 //Route::get('/topGames', 'Streamer\StreamerController@getTopGames');
-//Route::get('/streams', 'Streamer\StreamerController@getStreams');
+Route::get('/streams', 'Streamer\StreamerController@getStreams');
 //Route::get('/youtube', 'Streamer\StreamerController@getYoutubeStreams');
 Route::get('/games', 'Streamer\StreamerController@getTopGames');
 Route::post('/loadMore', 'Streamer\StreamerController@loadMoreStreams');

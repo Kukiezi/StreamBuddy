@@ -22,7 +22,7 @@ class StreamerService
         ];
         $this->twitchApi = new \TwitchApi\TwitchApi($options);
         $this->mixerApi = new Streams();
-        $this->youtubeApi = new YoutubeApi("AIzaSyDdkF_-xuJpjnkPzVbSm6PG4SakUnHd1l8");
+        $this->youtubeApi = new YoutubeApi("AIzaSyCTNjPy3Gzsn05dfSSI3z6W6Y2V4TBfDgk");
     }
 
     public function getGameLogo($streamer)
@@ -293,9 +293,6 @@ class StreamerService
         }
 
         try {
-//            $youtubeCounter = Counter::find(1);
-//            if ($youtubeCounter->counter > 3) {
-
             $youtubeStreams = $this->youtubeApi->fetchStreams();
             $youtubeStreams = $this->youtubeApi->getViewers($youtubeStreams);
             foreach ($youtubeStreams as $stream) {
@@ -306,13 +303,6 @@ class StreamerService
                     continue;
                 }
             }
-//                $youtubeCounter->counter = 0;
-//                $youtubeCounter->save();
-//                $truncate = true;
-//            } else {
-//                $youtubeCounter->counter += 1;
-//                $youtubeCounter->save();
-//            }
         } catch (\Exception $e) {
 
         }
