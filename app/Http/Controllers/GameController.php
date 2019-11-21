@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\StreamerService;
 use App\MixerApi\Streams;
+use Illuminate\Support\Facades\Auth;
 
 class GameController extends Controller
 {
@@ -20,13 +21,31 @@ class GameController extends Controller
     {
         $streams = $this->streamerService->fetchStreamsForGame($game);
         $fetchedGame = $this->streamerService->fetchGameByName($game);
+        $topTwitch = $this->streamerService->getTopThreeTwitch();
+        $topMixer = $this->streamerService->getTopThreeMixer();
+        $topYoutube = $this->streamerService->getTopThreeYoutube();
+        $followedStreams = [];
+        if (Auth::user() != null) {
+            $followedStreams = $this->streamerService->getFollowedStreams(Auth::user());
+        } else {
+            $followedStreams = [];
+        }
         $viewers = 0;
         if ($fetchedGame['viewers'] == null) {
             foreach ($streams as $stream) {
                 $viewers += $stream['viewers'];
             }
         }
-        return view('streams.game', ['streams' => $streams, 'game' => $fetchedGame, 'viewers' => $viewers]);
+        return view('streams.game',
+            [
+                'streams' => $streams,
+                'game' => $fetchedGame,
+                'viewers' => $viewers,
+                'topTwitch' => $topTwitch,
+                'topMixer' => $topMixer,
+                'topYoutube' => $topYoutube,
+                'followed' => $followedStreams
+            ]);
     }
 
 

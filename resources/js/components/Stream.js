@@ -3,24 +3,42 @@ import axios from 'axios';
 import mixer from '../../images/mixerdark.png'
 import twitch from '../../images/twitch.png'
 import youtube from '../../images/youtube3.png'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default class Stream extends Component {
 
     constructor(props) {
         super(props);
 
-        this.state = {}
+        this.state = {
+            follow: false
+        }
     }
 
     componentDidMount() {
+        if (this.props.followed.includes(this.props.stream.user)) {
+            this.setState({follow: true})
+        }
+    }
 
+    componentDidUpdate(nextProps) {
+        if (nextProps.followed !== this.props.followed) {
+            if (this.props.followed.includes(this.props.stream.user)) {
+                this.setState({follow: true})
+            }
+        }
+    }
+
+    follow(e) {
+        e.preventDefault();
+        this.setState({follow: !this.state.follow})
+        this.props.follow(this.props.stream.user);
     }
 
     render() {
         return (
             <div className="column is-4-tablet is-3-desktop is-11-mobile">
-                <a target="_blank"
-                   href={this.props.stream.url}>
+                <a href={"/stream/" + this.props.stream.platform + "/" + this.props.stream.user}>
                     <div className="card is-relative">
 
                         <div className="card-image">
@@ -61,11 +79,17 @@ export default class Stream extends Component {
                                        className="stream__viewers">{' ' + this.props.stream.viewers}</p>
                                 </div>
                             </div>
-
-                            <div className="content">
+                            <div className="content is-relative">
                                 <p className="stream__title">{this.props.stream.title}</p>
-                                <p
-                                    className="stream__game">{this.props.stream.game}</p>
+                                <p className="stream__game">{this.props.stream.game}</p>
+                                {localStorage.getItem('user') !== ''
+                                    ?
+                                    <FontAwesomeIcon onClick={(e) => this.follow(e)}
+                                                     className={this.state.follow ? "stream__follow is-followed" : "stream__follow"}
+                                                     icon="heart" size="lg"/>
+                                    : ''
+                                }
+
                             </div>
                         </div>
                     </div>

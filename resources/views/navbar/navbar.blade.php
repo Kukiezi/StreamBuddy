@@ -38,22 +38,21 @@
                 Join our discord server
                 <span style="padding-left: 0.5em; color: #7289DA; font-weight: normal;"><i class="fab fa-discord fa-2x"></i></span>
             </a>
-            {{--            @if (Auth::guest())--}}
-            {{--                <a class="navbar-item" href="{{ url('/login/google') }}"><img class="navbar__login"--}}
-            {{--                                                                              src={{asset('images/google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png')}}></a>--}}
-            {{--            @else--}}
-            {{--                {{ Auth::user()->name }} <span class="caret"></span>--}}
+                        @if (Auth::guest())
+                            <a class="navbar-item" href="{{ url('/login') }}">Login</a>
+                        @else
+                            {{ Auth::user()->name }} <span class="caret"></span>
 
-            {{--                <a class="dropdown-item" href="{{ route('logout') }}"--}}
-            {{--                   onclick="event.preventDefault();--}}
-            {{--                                                     document.getElementById('logout-form').submit();">--}}
-            {{--                    {{ __('Logout') }}--}}
-            {{--                </a>--}}
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                                 document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-            {{--                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-            {{--                    @csrf--}}
-            {{--                </form>--}}
-            {{--            @endif--}}
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        @endif
         </div>
     </div>
 </nav>

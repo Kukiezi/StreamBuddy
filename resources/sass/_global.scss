@@ -1,6 +1,39 @@
 body {
-  background: #23272A;
+  background: #1F1F23;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Monsterrat';
+  src: url('../fonts/Montserrat-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Montserrat-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('../fonts/futura medium bt.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('../fonts/HelveticaNeue.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .button__back {
@@ -20,4 +53,8 @@ body {
 
 .color-mixer {
   color: $mixer-color !important;
+}
+
+.is-followed {
+  color: #a83f39 !important;
 }

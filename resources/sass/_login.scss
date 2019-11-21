@@ -1,0 +1,65 @@
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+  &:hover {
+    color: white;
+     opacity: 1;
+  }
+}
+
+.github {
+  background-color: #444444;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+.login {
+  &__header {
+    font-family: $font-family-futura;
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+  &__text {
+    font-family: $font-family-futura;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+    //padding-bottom: 1.5em;
+    display: inline-block;
+  }
+
+  &__img {
+    width: 80px;
+  }
+
+  &__github {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__container {
+    border: 1px solid black;
+  }
+}

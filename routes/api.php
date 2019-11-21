@@ -16,8 +16,13 @@ use Illuminate\Http\Request;
 //Route::get('/topGames', 'Streamer\StreamerController@getTopGames');
 //Route::get('/streams', 'Streamer\StreamerController@getStreams');
 //Route::get('/youtube', 'Streamer\StreamerController@getYoutubeStreams');
-//Route::get('/games', 'Streamer\StreamerController@getGames');
+Route::get('/games', 'Streamer\StreamerController@getTopGames');
 Route::post('/loadMore', 'Streamer\StreamerController@loadMoreStreams');
+Route::middleware(['auth:api'])->group(function () {
+});
+Route::post('/follow', 'Streamer\StreamerController@follow');
+Route::post('/getFollowers', 'Streamer\StreamerController@getFollowers');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

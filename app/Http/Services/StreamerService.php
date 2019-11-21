@@ -7,6 +7,7 @@ use App\Stream;
 use App\Game;
 use App\YoutubeApi\YoutubeApi;
 use App\Counter;
+use App\User;
 
 class StreamerService
 {
@@ -24,10 +25,103 @@ class StreamerService
         $this->youtubeApi = new YoutubeApi("AIzaSyDdkF_-xuJpjnkPzVbSm6PG4SakUnHd1l8");
     }
 
+    public function getGameLogo($streamer)
+    {
+        $stream = Stream::where('user', $streamer)->first();
+        return Game::where('name', $stream->game)->first();
+    }
+
+    public function fetchStreamerWithName($streamer)
+    {
+        return Stream::where('user', $streamer)->first();
+    }
+
+    public function getFollowedStreams(User $user)
+    {
+        $data = array();
+        $followed = json_decode($user->streams, true);
+        $streamsAll = Stream::all();
+        foreach ($followed as $followedStreamer) {
+            foreach ($streamsAll as $stream) {
+                if ($stream->user == $followedStreamer) {
+                    array_push($data, $stream);
+                    break;
+                }
+            }
+        }
+        $viewers = array();
+        foreach ($data as $key => $row) {
+            $viewers[$key] = $row['viewers'];
+        }
+        array_multisort($viewers, SORT_DESC, $data);
+
+        return $data;
+    }
+
     public function getTopGames()
     {
         $games = $this->twitchApi->getTopGames();
         return $games;
+    }
+
+    public function followStreamer(array $data, User $user)
+    {
+        if ($user->streams == null) {
+            $user->streams = array($data['streamer']);
+            $user->save();
+        } else {
+            $streams = json_decode($user->streams, true);
+            if (($key = array_search($data['streamer'], $streams)) !== false) {
+                array_splice($streams, $key, 1);
+            } else {
+                array_push($streams, $data['streamer']);
+            }
+            $user->streams = $streams;
+            $user->save();
+        }
+        return $user;
+    }
+
+    public function followStreamerStatic(string $streamer, User $user)
+    {
+        if ($user->streams == null) {
+            $user->streams = $streamer;
+            $user->save();
+        } else {
+            $streams = json_decode($user->streams, true);
+            if (($key = array_search($streamer, $streams)) !== false) {
+                array_splice($streams, $key, 1);
+            } else {
+                array_push($streams, $streamer);
+            }
+            $user->streams = $streams;
+            $user->save();
+        }
+        return $user;
+    }
+
+    public function getFollowers(User $user)
+    {
+        if ($user->streams == null) {
+            return response()->json('No followers', 200);
+        } else {
+            return json_decode($user->streams, true);
+        }
+    }
+
+    public function getTopThreeTwitch()
+    {
+        return Stream::where('platform', 'twitch')->limit(3)->get();
+    }
+
+    public function getTopThreeMixer()
+    {
+        return Stream::where('platform', 'mixer')->limit(3)->get();
+    }
+
+    public function getTopThreeYoutube()
+    {
+        return Stream::where('platform', 'youtube')->limit(3)->get();
     }
 
     public function loadMore($id, array $platform)
@@ -195,6 +289,7 @@ class StreamerService
             }
         } catch (\Exception $e) {
         }
+
         try {
 //            $youtubeCounter = Counter::find(1);
 //            if ($youtubeCounter->counter > 3) {
@@ -272,7 +367,7 @@ class StreamerService
     {
         $stream = array(
             'platform' => 'mixer',
-            'preview' => isset($data['bannerUrl']) ? $data['bannerUrl'] : 'https://cdn3-www.gamerevolution.com/assets/uploads/2019/10/Mixer-subscription-price-drop.jpg',
+            'preview' => isset($data['thumbnail']['url']) ? $data['thumbnail']['url'] : 'https://cdn3-www.gamerevolution.com/assets/uploads/2019/10/Mixer-subscription-price-drop.jpg',
             'logo' => isset($data['user']['avatarUrl']) ? $data['user']['avatarUrl'] : 'https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png',
             'user' => isset($data['token']) ? $data['token'] : 'unknown',
             'viewers' => isset($data['viewersCurrent']) ? $data['viewersCurrent'] : 0,

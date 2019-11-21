@@ -15,17 +15,19 @@
 
 Auth::routes();
 Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 Route::get('/news', 'NewsController@index');
+Route::get('/stream/{platform}/{streamer}', 'StreamController@index');
 Route::get('/about', 'AboutController@index');
 Route::get('/news/{slug}', 'NewsController@newsView');
 Route::get('/game/{game}', 'GameController@index');
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/privacy', 'AboutController@privacy');
-//Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
-//Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login', 'HomeController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-
-
+Route::post('follow', 'StreamController@follow')->name('follow');
 
 
 
