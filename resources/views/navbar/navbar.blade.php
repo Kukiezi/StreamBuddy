@@ -42,7 +42,7 @@
             @if (Auth::guest())
                 <a class="navbar-item" style="padding-right: 2rem;" href="{{ url('/login') }}">Login</a>
             @else
-                <div id="dropdown" class="dropdown is-hidden-mobile">
+                <div id="dropdown" class="dropdown is-hidden-touch">
                     <div id="trigger" class="dropdown-trigger">
                         {{--                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">--}}
                         <a class="navbar-item has-text-white">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                                <a class="navbar-item" href="{{ route('logout') }}"
+                                <a class="navbar-item is-hidden-desktop" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                                                  document.getElementById('logout-form').submit();">
                                     <p>{{ __('Logout') }}</p>
